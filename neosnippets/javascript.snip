@@ -24,6 +24,41 @@ options head
     ${0:TARGET}
   };
 
+snippet     quickstart
+abbr        qs
+options     head
+    'use strict';
+
+    (function(${2:ARGS}){
+        ${0:#TARGET}
+    })(${1:GLOBALS});
+
+snippet     jtest
+abbr        jt
+options     head
+    ${1:describe}("${2:COMMENT}",function(){
+        ${0:#TARGET}
+    });
+
+snippet     jtest_around
+abbr        jta
+options     head
+    ${1:before}Each(function(){
+        ${0:#TARGET}
+    });
+
+snippet     angular
+abbr        ang
+options     head
+    angular.module('${1:NAME}',${0:TARGET});
+
+
+snippet     angulartest
+abbr        angt
+options     head
+    angular.mock.module('${1:NAME}');
+    ${0:TARGET}
+
 
 snippet f
 options word
